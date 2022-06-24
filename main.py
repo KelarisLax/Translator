@@ -1,9 +1,8 @@
 from googletrans import Translator
 #https://py-googletrans.readthedocs.io/en/latest/ documentation
+import keyboard
 
 translator = Translator()
-
-my_file = open(r"C:\Users\vasil\OneDrive\Рабочий стол\Translation.txt", 'w')
 
 languages_dict = {
     'ar': 'arabic',
@@ -32,9 +31,13 @@ languages_dict = {
     'vi': 'vietnamese',
     'zu': 'zulu',
 }
+
 var_translation1 = input('Title in ENGLISH: \n')
+var_translation3 = input('Hashtag in ENGLISH: \n')
 var_translation2 = input('Description in ENGLISH: \n')
 
+
+#keyboard.read_key()
 
 def translation():
 
@@ -90,13 +93,14 @@ def translation():
         print('French')
 
     out1 = translator.translate(var_translation1, dest=dest_)
+    out3 = translator.translate(var_translation3, dest=dest_)
     out2 = translator.translate(var_translation2, dest=dest_)
 
-    print(out1.text + '\n' + out2.text)
+    print(out1.text + '\n' + out3.text + '\n' + '\n' + out2.text)
 
 
 for dest_ in languages_dict:
     translation()
-    print(dest_ + '\n')
+    print('\n')
 
 
