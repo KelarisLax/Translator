@@ -1,5 +1,5 @@
 from googletrans import Translator
-
+#https://py-googletrans.readthedocs.io/en/latest/ documentation
 
 translator = Translator()
 
@@ -32,19 +32,71 @@ languages_dict = {
     'vi': 'vietnamese',
     'zu': 'zulu',
 }
-var_translation = input('What you want to translate? \n')
+var_translation1 = input('Title in ENGLISH: \n')
+var_translation2 = input('Description in ENGLISH: \n')
 
 
 def translation():
 
-    out = translator.translate(var_translation, dest=dest_)
-    #output = [word.encode('utf-8') for word in out.text]
-    print(out.text)
-    print(out.dest)
+    if dest_ == 'ar':
+        print('Arabic')
+    elif dest_ == 'zh-tw':
+        print('Chinese (traditional)')
+    elif dest_ == 'tl':
+        print('Filipino')
+    elif dest_ == 'ka':
+        print('Georgian')
+    elif dest_ == 'de':
+        print('German')
+    elif dest_ == 'hi':
+        print('Hindi')
+    elif dest_ == 'id':
+        print('Indonesian')
+    elif dest_ == 'it':
+        print('Italian')
+    elif dest_ == 'ja':
+        print('Japanese')
+    elif dest_ == 'ko':
+        print('Korean')
+    elif dest_ == 'lv':
+        print('Latvian')
+    elif dest_ == 'lt':
+        print('Lithuanian')
+    elif dest_ == 'no':
+        print('Norwegian')
+    elif dest_ == 'fa':
+        print('Persian')
+    elif dest_ == 'pl':
+        print('Polish')
+    elif dest_ == 'pt':
+        print('Portuguese')
+    elif dest_ == 'ru':
+        print('Russian')
+    elif dest_ == 'es':
+        print('Spanish')
+    elif dest_ == 'sv':
+        print('Swedish')
+    elif dest_ == 'th':
+        print('Thai')
+    elif dest_ == 'tr':
+        print('Turkish')
+    elif dest_ == 'uk':
+        print('Ukrainian')
+    elif dest_ == 'vi':
+        print('Vietnamese')
+    elif dest_ == 'zu':
+        print('Zulu')
+    elif dest_ == 'fr':
+        print('French')
+
+    out1 = translator.translate(var_translation1, dest=dest_)
+    out2 = translator.translate(var_translation2, dest=dest_)
+
+    print(out1.text + '\n' + out2.text)
 
 
 for dest_ in languages_dict:
     translation()
-    print(dest_)
+    print(dest_ + '\n')
 
 
