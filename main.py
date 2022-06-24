@@ -1,6 +1,5 @@
 from googletrans import Translator
 #https://py-googletrans.readthedocs.io/en/latest/ documentation
-import keyboard
 
 translator = Translator()
 
