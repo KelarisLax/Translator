@@ -1,5 +1,6 @@
 from googletrans import Translator
-import json
+
+
 translator = Translator()
 
 my_file = open(r"C:\Users\vasil\OneDrive\Рабочий стол\Translation.txt", 'w')
