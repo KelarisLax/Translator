@@ -42,7 +42,7 @@ var_translation2 = input('Description in ENGLISH: \n')
 keyboard.wait('enter')
 
 
-#keyboard.read_key()
+
 
 def translation():
 
