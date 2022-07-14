@@ -33,14 +33,10 @@ languages_dict = {
 }
 
 var_translation1 = input('Title in ENGLISH: \n')
-keyboard.wait('enter')
 
 var_translation3 = input('Hashtag in ENGLISH: \n')
-keyboard.wait('enter')
 
 var_translation2 = input('Description in ENGLISH: \n')
-keyboard.wait('enter')
-
 
 
 
